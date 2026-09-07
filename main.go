@@ -92,6 +92,6 @@ func main() {
 	http.HandleFunc("/", formHandler)
 	http.HandleFunc("/submit", submitHandler)
 
-	log.Println("Server running on http://localhost:4040")
-	log.Fatal(http.ListenAndServe(":4040", nil))
+	fmt.Println("Server running on http://localhost:4040")
+	http.ListenAndServe(":4040", nil)
 }
